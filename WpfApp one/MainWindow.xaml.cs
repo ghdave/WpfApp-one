@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WpfApp_one
 {
     /// <summary>
@@ -23,6 +24,31 @@ namespace WpfApp_one
         public MainWindow()
         {
             InitializeComponent();
+
+            //Car car;
+
+            //car = new Car("Red");
+            //car = new Car("Green");
+        }
+
+                       
+
+        private void butt_clickMe_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Button clickMe;
+            SillyMessages SM = new SillyMessages();
+            
+            clickMe = (Button) sender;
+            clickMe.Content = String.Concat("RIGHT BUTTON ", SM.Mumble(1));
+        }
+
+        private void butt_clickMe_Click(object sender, RoutedEventArgs e)
+        {
+            Button clickMe;
+            SillyMessages SM = new SillyMessages();
+            
+            clickMe = (Button)sender;
+            clickMe.Content = String.Concat("LEFT BUTTON ",SM.Mumble(2));
         }
     }
 }

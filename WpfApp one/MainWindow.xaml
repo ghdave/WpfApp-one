@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_one"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="WPF one - Something to stick into my GitHub Test." Height="350" Width="525">
     <Grid>
-        
+        <Button x:Name="butt_clickMe" Content="CLICK ME" HorizontalAlignment="Left" Height="67" Margin="64,71,0,0" VerticalAlignment="Top" Width="163" AutomationProperties.HelpText="You really should click this button." MouseUp="butt_clickMe_MouseUp" Click="butt_clickMe_Click">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF00CFF0" Offset="0.307"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.475"/>
+                    <GradientStop Color="White" Offset="0.605"/>
+                    <GradientStop Color="#FF49EEC8" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
     </Grid>
 </Window>
